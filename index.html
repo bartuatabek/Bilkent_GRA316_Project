@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Devs 2020</title>
+	<link href="./styles/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&effect=3d-float" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./scripts/main.js"></script>
+</head>
+
+<body>
+	<nav id="navbar">
+		<a href="index.html" class="nav-title">
+			<img src="img/devs-icon.svg" alt="devs-logo">
+		</a>
+		<div class="topnav-right">
+			<a href="#overview" class="horizontal-menu">Overview</a>
+			<a href="#speakers" class="horizontal-menu">Speakers</a>
+			<a href="#timetable" class="horizontal-menu">Schedule</a>
+			<a href="#location" class="horizontal-menu">Location</a>
+			<button type="button" class="horizontal-menu" onclick="openModal()">Register</button>
+			<button type="button" class="hamburger" onclick="showMenu()">
+				<i id="hamburger" class="fas fa-bars fa-2x"></i>
+			</button>
+		</div>
+		<hr id="navbar-border">
+		<div class="menu" id="menu">
+			<a href="#overview" onclick="closeMenu()">Overview</a>
+			<a href="#speakers" onclick="closeMenu()">Speakers</a>
+			<a href="#timetable" onclick="closeMenu()">Schedule</a>
+			<a href="#location" onclick="closeMenu()">Location</a>
+			<button type="button" onclick="openModal()">Register</button>
+		</div>
+	</nav>
+
+	<header>
+		<div class="header-container">
+			<img id="codes" src="img/codes.png" alt="codes">
+			<img id="geek" src="img/geeks.png" alt="geeks">
+
+			<div class="hero-text">
+				<h1>Design. Code. Pitch. Blow Minds.</h1>
+				<h3>Worldwide Devs Conferance 2020. <br> San Francisco, CA, June 2-6</h3>
+				<button type="button" onclick="openModal()">Register</button>
+			</div>
+			<a href="#overview"><i class="fas fa-chevron-down"></i></a>
+		</div>
+	</header>
+
+	<div id="openModal" class="modalDialog">
+		<div id="modalBox">
+			<a href="#close" class="closebutton" onclick="openModal()"><i class="far fa-times-circle"></i></a>
+			<h4>Coming This Summer</h4>
+			<h1>Register online for a chance to attend Devs'20.</h1>
+			<p>Stay tuned for details on the web, by email, and in the Devs Conference app.*</p>
+			<form>
+				<input type="text" placeholder="Full Name" required>
+				<br>
+				<input type="email" placeholder="Email Address" required>
+				<br>
+				<button type="button" onclick="openModal()">Register</button>
+			</form>
+			<h5>* Emails will be sent, where available, when
+				there's news about the event.</h5>
+		</div>
+	</div>
+
+	<section id="overview">
+		<div class="overview-container">
+			<div class="overview-card">
+				<img src="img/geek-orange.svg" alt="geek">
+				<h2>Sessions</h2>
+				<p>Immerse yourself in over 100 technical and design-focused sessions.</p>
+			</div>
+			<div class="overview-card">
+				<img src="img/geek-green.svg" alt="geek">
+				<h2>Hands-On Labs</h2>
+				<p>Get in-depth details on how to implement new features, directly from the engineers who helped build the latest advances.</p>
+			</div>
+			<div class="overview-card">
+				<img src="img/geek-purple.svg" alt="geek">
+				<h2>Consultations</h2>
+				<p>Make an appointment to take your apps to the next level with one-on-one guidance from experts.</p>
+			</div>
+			<div class="overview-card">
+				<img src="img/geek-cyan.svg" alt="geek">
+				<h2>Get Togethers</h2>
+				<p>Engage in motivating conversations around key topics with fellow developers and experts.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="speakers">
+		<h2>Speakers</h2>
+
+		<div id="cardcollection">
+			<div class="card">
+				<img src="./img/merril-burgett.jpg" alt="Merril Burgett">
+				<h3>Merril Burgett</h3>
+				<h4>CTO – Pied Piper</h4>
+				<div class="social">
+					<ul>
+						<li><i class="fab fa-facebook-f fa-2x"></i></li>
+						<li><i class="fab fa-twitter fa-2x"></i></li>
+						<li><i class="fab fa-linkedin fa-2x"></i></li>
+					</ul>
+				</div>
+				<p>Merril Burgett is a software designer, creator of the Pied Piper app and algorithm,</p>
+			</div>
+			<div class="card">
+				<img src="./img/ameer-basheer.jpg" alt="Ameer Basheer">
+				<h3>Ameer Basheer</h3>
+				<h4>Founder – Spliceline</h4>
+				<div class="social">
+					<ul>
+						<li><i class="fab fa-facebook-f fa-2x"></i></li>
+						<li><i class="fab fa-twitter fa-2x"></i></li>
+						<li><i class="fab fa-linkedin fa-2x"></i></li>
+					</ul>
+				</div>
+				<p>Ameer Basheer is an Indian American business executive, the chief executive officer of Spliceline. Basheer began his career as a materials engineer and joined Google as a management executive in 2004.</p>
+			</div>
+			<div class="card">
+				<img src="./img/irena-carpaccio.jpg" alt="Irena Carpaccio">
+				<h3>Irena Carpaccio</h3>
+				<h4>COO – Helix</h4>
+				<div class="social">
+					<ul>
+						<li><i class="fab fa-facebook-f fa-2x"></i></li>
+						<li><i class="fab fa-twitter fa-2x"></i></li>
+						<li><i class="fab fa-linkedin fa-2x"></i></li>
+					</ul>
+				</div>
+				<p>Irena Carpaccio is the COO at Helix Inc. He is a prominent figure in Helix's famed presentations and has been a member of the company's executive team for over 30 years.</p>
+			</div>
+			<div class="card">
+				<img src="./img/richard-biros.jpg" alt="Richard Biros">
+				<h3>Richard Biros</h3>
+				<h4>Tech Journalist – SF Chronicles</h4>
+				<div class="social">
+					<ul>
+						<li><i class="fab fa-facebook-f fa-2x"></i></li>
+						<li><i class="fab fa-twitter fa-2x"></i></li>
+						<li><i class="fab fa-linkedin fa-2x"></i></li>
+					</ul>
+				</div>
+				<p>Richard Biros is a writer, blog publisher, UI designer, and the inventor of the Markdown markup language. Biros is from the Philadelphia, Pennsylvania, area.</p>
+			</div>
+			<div class="card">
+				<img src="./img/jony-ive.jpg" alt="Jony Ive">
+				<h3>Jony Ive</h3>
+				<h4>Founder – LoveFrom</h4>
+				<div class="social">
+					<ul>
+						<li><i class="fab fa-facebook-f fa-2x"></i></li>
+						<li><i class="fab fa-twitter fa-2x"></i></li>
+						<li><i class="fab fa-linkedin fa-2x"></i></li>
+					</ul>
+				</div>
+				<p>Sir Jonathan Paul "Jony" Ive, KBE, HonFREng, RDI is a British industrial, product and architectural designer who was the former Chief Design Officer of Apple Inc., and the serving Chancellor of the Royal College of Art in London.</p>
+			</div>
+			<div class="card">
+				<img src="./img/metin-ozer.jpg" alt="Metin Özer">
+				<h3>Metin Özer</h3>
+				<h4>Design Lead – Zeplin</h4>
+				<div class="social">
+					<ul>
+						<li><i class="fab fa-facebook-f fa-2x"></i></li>
+						<li><i class="fab fa-twitter fa-2x"></i></li>
+						<li><i class="fab fa-linkedin fa-2x"></i></li>
+					</ul>
+				</div>
+				<p>Metin Özer is an independent graphic designer, writer and teacher in New York City. His job at Zeplin revolves around the relationship between interfaces and the concept of time.</p>
+			</div>
+			<div class="card">
+				<img src="./img/elon-musk.jpg" alt="Elon Musk">
+				<h3>Elon Musk</h3>
+				<h4>CEO – Tesla</h4>
+				<div class="social">
+					<ul>
+						<li><i class="fab fa-facebook-f fa-2x"></i></li>
+						<li><i class="fab fa-twitter fa-2x"></i></li>
+						<li><i class="fab fa-linkedin fa-2x"></i></li>
+					</ul>
+				</div>
+				<p>Elon Reeve Musk FRS is an engineer, industrial designer, and technology entrepreneur. He is a citizen of South Africa, the United States, and Canada.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="timetable">
+		<h2>Schedule</h2>
+
+		<ul class="days">
+			<li><a class="day" href="#monday">Monday</a></li>
+			<li><a class="day" href="#tuesday">Tuesday</a></li>
+			<li><a class="day" href="#wednesday">Wednesday</a></li>
+			<li><a class="day" href="#thursday">Thursday</a></li>
+			<li><a class="day" href="#friday">Friday</a></li>
+		</ul>
+
+		<form class="search">
+			<div class="input-container">
+				<i class="fas fa-search"></i>
+				<input class="input-field" type="text" placeholder="Search for events" name="search">
+			</div>
+		</form>
+
+		<div class="fade-container">
+			<div class="table-container">
+				<table id="schedule">
+					<tr id="monday">
+						<th>
+							<span class="h4">MONDAY, 10:00 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="pink">
+						<td>
+							<span class="h3 header">Keynote</span>
+							<br>
+							<span class="pink">Hall 2 — 10:00 AM to 12:00 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">MONDAY, 2:30 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="pink">
+						<td>
+							<span class="h3 header">State of the Union</span>
+							<br>
+							<span class="pink">Hall 2 — 2:30 PM to 4:30 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">MONDAY, 5:00 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="pink">
+						<td>
+							<span class="h3 header">Devs Design Awards</span>
+							<br>
+							<span class="pink">Hall 2 — 5:00 PM to 6:00 PM</span>
+						</td>
+					</tr>
+					<tr id="tuesday">
+						<th>
+							<span class="h4">TUESDAY, 9:00 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3 header">DevKit Lab</span>
+							<br>
+							<span class="purple">Technology Lab 8 — 9:00 AM to 11:00 AM</span>
+						</td>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3">Interface Builder and Layout Lab</span>
+							<br>
+							<span class="purple">Technology Lab 7 — 9:00 AM to 12:00 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">TUESDAY, 1:00 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3 header">Machine Learning Lab</span>
+							<br>
+							<span class="purple">Technology Lab 11 — 1:00 PM to 2:00 PM</span>
+						</td>
+					</tr>
+					<tr class="green">
+						<td>
+							<span class="h3">Design Lab</span>
+							<br>
+							<span class="green">User Interface Design Lab 1 — 1:00 PM to 6:45 PM</span>
+						</td>
+					</tr>
+					<tr id="wednesday">
+						<th>
+							<span class="h4">WEDNESDAY, 7:00 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="orange">
+						<td>
+							<span class="h3 header">Devs Run with Joan Benoit Samuelson</span>
+							<br>
+							<span class="orange">Activity Studio — 7:00 AM to 8:00 AM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">WEDNESDAY, 10:00 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="green">
+						<td>
+							<span class="h3 header">Pitch to the Devs</span>
+							<br>
+							<span>Hall 3 — 10:00 AM to 10:40 AM</span>
+						</td>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3">Foundation Lab</span>
+							<br>
+							<span class="purple">Technology Lab 3 — 10:00 AM to 1:00 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">WEDNESDAY, 11:30 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="orange">
+						<td>
+							<span class="h3 header">Wellness Lunchtime Get-Together</span>
+							<br>
+							<span class="orange">Market Terrace — 11:30 AM to 12:30 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">WEDNESDAY, 2:00 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3 header">Designing for Privacy</span>
+							<br>
+							<span class="purple">Hall 1 — 2:00 PM to 5:40 PM</span>
+						</td>
+					</tr>
+					<tr class="green">
+						<td>
+							<span class="h3">Advances in UI Data Sourcesy</span>
+							<br>
+							<span class="green">Hall 2 — 2:00 PM to 2:40 PM</span>
+						</td>
+					</tr>
+					<tr id="thursday">
+						<th>
+							<span class="h4">THURSDAY, 9:00 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3 header">Font Management and Text Scaling</span>
+							<br>
+							<span class="purple">Hall 1 — 9:00 AM to 9:40 AM</span>
+						</td>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3">App Review By Appointment Lab</span>
+							<br>
+							<span class="purple">Lab 4 — 9:00 AM to 6:00 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">THURSDAY, 11:30 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="orange">
+						<td>
+							<span class="h3 header">Education Lunchtime Get-Together</span>
+							<br>
+							<span class="orange">Market Terrace — 11:30 AM to 12:30 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">THURSDAY, 12:00 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3 header">Text, Fonts, and Symbols Lab</span>
+							<br>
+							<span class="purple">Technology Lab 6 — 12:00 PM to 2:00 PM</span>
+						</td>
+					</tr>
+					<tr class="green">
+						<td>
+							<span class="h3">Performance, Power, Crashes, and Debugging Lab</span>
+							<br>
+							<span class="green">Technology Lab 7 — 12:00 PM to 3:00 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">THURSDAY, 7:00 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="pink">
+						<td>
+							<span class="h3 header">Bash</span>
+							<br>
+							<span class="pink">Discovery Meadow — 7:00 PM to 10:00 PM</span>
+						</td>
+					</tr>
+					<tr id="friday">
+						<th>
+							<span class="h4">FRIDAY, 9:00 AM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="green">
+						<td>
+							<span class="h3 header">Networking Lab</span>
+							<br>
+							<span class="green">Technology Lab 1 — 9:00 AM to 12:00 PM</span>
+						</td>
+					</tr>
+					<tr class="purple">
+						<td>
+							<span class="h3">Accessibility Design Lab</span>
+							<br>
+							<span class="purple">User Interface Design Lab 2 — 9:00 AM to 5:00 PM</span>
+						</td>
+					</tr>
+					<tr class="green">
+						<td>
+							<span class="h3">Business & Marketing By Appointment Lab</span>
+							<br>
+							<span class="green">Lab 6 — 9:00 AM to 4:00 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">FRIDAY, 12:30 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="orange">
+						<td>
+							<span class="h3 header">Elon Musk: Man of Future</span>
+							<br>
+							<span class="orange">Hall 2 — 12:30 PM to 1:20 PM</span>
+						</td>
+					</tr>
+					<tr class="pink">
+						<td>
+							<span class="h3">Devs Startup Battlefield</span>
+							<br>
+							<span class="pink">Hall 1 — 12:30 PM to 3:30 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">FRIDAY, 4:00 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="pink">
+						<td>
+							<span class="h3 header">Devs Startup Battlefield Award Ceremony</span>
+							<br>
+							<span class="pink">Hall 1 — 4:00 PM to 5:00 PM</span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<span class="h4">FRIDAY, 7:00 PM</span>
+							<hr>
+						</th>
+					</tr>
+					<tr class="pink">
+						<td>
+							<span class="h3 header">Farewell Party</span>
+							<br>
+							<span class="pink">Discovery Meadow — 7:00 PM to 10:00 PM</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="fader"></div>
+		</div>
+	</section>
+
+	<section id="location">
+		<h2>Location</h2>
+
+		<div class="location-preference">
+			<button class="location-preference-button" type="button" onclick="openMap()">Map</button>
+			<button class="location-preference-button" type="button" onclick="hideMap()">Sketch</button>
+		</div>
+
+		<div class="map">
+				<img id="sketch" src="img/floor-map.svg" alt="map">
+				<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.5635904678593!2d-121.89120504918357!3d37.329163879744144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcdccb5ab47ed%3A0x736aaec6dbb2c012!2sSan%20Jose%20McEnery%20Convention%20Center!5e0!3m2!1sen!2sus!4v1586853646210!5m2!1sen!2sus" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		</div>
+	</section>
+	<footer>
+		<hr>
+		<h4>© 2020 Bartu Atabek. All rights reserved.</h4>
+	</footer>
+</body>
+
+</html>
