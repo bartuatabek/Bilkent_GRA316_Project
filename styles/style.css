@@ -24,9 +24,12 @@ nav {
 }
 
 .scrollnav {
-	background-color: rgba(245, 245, 245, 0.25);
+	background-color: white;
+	/*rgba(245, 245, 245, 0.75);*/
+	/*
 	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
+*/
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -83,6 +86,7 @@ nav hr {
 	padding-top: 10px;
 	width: auto;
 	border: none;
+	box-shadow: none;
 	transition: all 0.3s ease;
 }
 
@@ -155,191 +159,6 @@ h4 {
 section {
 	height: 100vh;
 	/*	scroll-snap-align: start;*/
-}
-
-@media (max-width: 840px) {
-	.card {
-		flex-basis: 45%;
-	}
-
-	table {
-		width: 93%;
-		font-size: 14px;
-		line-height: 18px;
-	}
-
-	.overview-card {
-		flex-basis: 45%;
-	}
-
-	.modalDialog > div {
-		width: 75% !important;
-	}
-
-	.modalDialog h1 {
-		padding-top: 0;
-		font-size: 20px !important;
-	}
-
-	.modalDialog h4 {
-		font-size: 10px !important;
-	}
-
-	.modalDialog h5 {
-		font-size: 10px !important;
-	}
-
-	.closebutton {
-		top: 1% !important;
-		right: 1% !important;
-		font-size: 20px !important;
-	}
-
-	.map img {
-		width: 800px !important;
-	}
-
-	#map {
-		width: 800px !important;
-		height: 600px !important;
-	}
-}
-
-@media (max-width: 630px) {
-	h1 {
-		text-align: left;
-		padding-left: 10%;
-		padding-top: 63px;
-	}
-
-	.card {
-		flex-basis: 92%;
-	}
-
-	table {
-		width: 100%;
-		font-size: 12px;
-		line-height: 16px;
-	}
-
-	.overview-card {
-		flex-basis: 92%;
-	}
-
-	.modalDialog > div {
-		width: 75% !important;
-	}
-
-	.modalDialog h1 {
-		padding-top: 0;
-		font-size: 20px !important;
-	}
-
-	.modalDialog h4 {
-		font-size: 10px !important;
-	}
-
-	.modalDialog h5 {
-		font-size: 10px !important;
-	}
-
-	.closebutton {
-		top: 1% !important;
-		right: 1% !important;
-		font-size: 20px !important;
-	}
-
-	.hamburger {
-		display: inline-block
-	}
-
-	.horizontal-menu {
-		display: none;
-	}
-
-	#geek {
-		margin-top: 25% !important;
-	}
-
-	.hero-text > h1 {
-		font-size: 48px;
-	}
-
-	.hero-text > h3 {
-		font-size: 20px;
-	}
-
-	.map img {
-		width: 600px !important;
-	}
-
-	#map {
-		width: 550px !important;
-		height: 800px !important;
-	}
-}
-
-@media (max-width: 420px) {
-	table {
-		font-size: 10px;
-		line-height: 14px;
-	}
-
-	h1 {
-		padding-top: 0;
-	}
-
-	.modalDialog > div {
-		width: 75% !important;
-	}
-
-	.modalDialog h1 {
-		font-size: 20px !important;
-	}
-
-	.modalDialog h4 {
-		width: 50% !important;
-		font-size: 10px !important;
-	}
-
-	.modalDialog h5 {
-		font-size: 10px !important;
-	}
-
-	.closebutton {
-		top: 1% !important;
-		right: 1% !important;
-		font-size: 20px !important;
-	}
-
-	.hamburger {
-		display: inline-block
-	}
-
-	.horizontal-menu {
-		display: none;
-	}
-
-	#geek {
-		margin-top: 35% !important;
-	}
-
-	.hero-text > h1 {
-		font-size: 48px;
-	}
-
-	.hero-text > h3 {
-		font-size: 20px;
-	}
-
-	.map img {
-		width: 350px !important;
-	}
-
-	#map {
-		width: 350px !important;
-		height: 600px !important;
-	}
 }
 
 /*-----HERO-----*/
@@ -593,6 +412,7 @@ button:hover {
 	flex-direction: column;
 	height: auto;
 	margin: 5%;
+	-webkit-perspective: 1000;
 }
 
 .card img {
@@ -603,7 +423,9 @@ button:hover {
 	display: block;
 	object-fit: cover;
 	border-radius: 10px 10px 10px 10px;
-	transform: perspective(1000px) rotateY(-22.5deg);
+	/*	transform: perspective(1000px) rotateY(-22.5deg);*/
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateY(-22.5deg);
 	box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -883,4 +705,197 @@ table {
 
 footer h4 {
 	padding-bottom: 12px;
+}
+
+
+/*-----RESPONSIVE DESIGN-----*/
+
+@media (max-width: 840px) {
+	.card {
+		flex-basis: 45%;
+	}
+
+	table {
+		width: 93%;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.overview-card {
+		flex-basis: 45%;
+	}
+
+	.modalDialog > div {
+		width: 75% !important;
+	}
+
+	.modalDialog h1 {
+		padding-top: 0;
+		font-size: 20px !important;
+	}
+
+	.modalDialog h4 {
+		font-size: 10px !important;
+	}
+
+	.modalDialog h5 {
+		font-size: 10px !important;
+	}
+
+	.closebutton {
+		top: 1% !important;
+		right: 1% !important;
+		font-size: 20px !important;
+	}
+
+	.map img {
+		width: 800px !important;
+	}
+
+	#map {
+		width: 800px !important;
+		height: 600px !important;
+	}
+}
+
+@media (max-width: 630px) {
+	h1 {
+		text-align: left;
+		padding-left: 10%;
+		padding-top: 63px;
+	}
+
+	.card {
+		flex-basis: 92%;
+	}
+
+	table {
+		width: 100%;
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.overview-card {
+		flex-basis: 92%;
+	}
+
+	.modalDialog > div {
+		width: 75% !important;
+	}
+
+	.modalDialog h1 {
+		padding-top: 0;
+		font-size: 20px !important;
+	}
+
+	.modalDialog h4 {
+		font-size: 10px !important;
+	}
+
+	.modalDialog h5 {
+		font-size: 10px !important;
+	}
+
+	.closebutton {
+		top: 1% !important;
+		right: 1% !important;
+		font-size: 20px !important;
+	}
+
+	.hamburger {
+		display: inline-block
+	}
+
+	.horizontal-menu {
+		display: none;
+	}
+
+	#geek {
+		margin-top: 25% !important;
+	}
+
+	.hero-text > h1 {
+		font-size: 48px;
+	}
+
+	.hero-text > h3 {
+		font-size: 20px;
+	}
+
+	.map img {
+		width: 600px !important;
+	}
+
+	#map {
+		width: 550px !important;
+		height: 800px !important;
+	}
+}
+
+@media (max-width: 420px) {
+	table {
+		font-size: 10px;
+		line-height: 14px;
+	}
+
+	h1 {
+		padding-top: 0;
+	}
+
+	.modalDialog > div {
+		width: 75% !important;
+	}
+
+	.modalDialog h1 {
+		font-size: 20px !important;
+	}
+
+	.modalDialog h4 {
+		width: 50% !important;
+		font-size: 10px !important;
+	}
+
+	.modalDialog h5 {
+		font-size: 10px !important;
+	}
+
+	.closebutton {
+		top: 1% !important;
+		right: 1% !important;
+		font-size: 20px !important;
+	}
+
+	.hamburger {
+		display: inline-block
+	}
+
+	.horizontal-menu {
+		display: none;
+	}
+
+	#geek {
+		margin-top: 35% !important;
+	}
+
+	.hero-text {
+		margin-top: 10%;
+		 !important;
+	}
+
+	.hero-text > h1 {
+		font-size: 48px;
+	}
+
+	.hero-text > h3 {
+		font-size: 20px;
+	}
+
+	.map img {
+		width: 350px !important;
+	}
+
+	#map {
+		width: 350px !important;
+		height: 600px !important;
+	}
 }
