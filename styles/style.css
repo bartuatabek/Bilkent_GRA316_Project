@@ -25,11 +25,6 @@ nav {
 
 .scrollnav {
 	background-color: white;
-	/*rgba(245, 245, 245, 0.75);*/
-	/*
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	backdrop-filter: saturate(180%) blur(20px);
-*/
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,7 +44,7 @@ nav a:hover {
 
 .topnav-right {
 	height: inherit;
-	margin-right: 40px;
+	margin-right: 5%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -70,8 +65,7 @@ nav hr {
 
 .nav-title > * {
 	width: auto;
-	height: 40px;
-	margin-left: 40px;
+	margin-left: 5%;
 	margin-top: 5%;
 }
 
@@ -745,12 +739,40 @@ footer h4 {
 	}
 
 	.map img {
-		width: 800px !important;
+		width: 90% !important;
 	}
 
 	#map {
-		width: 800px !important;
+		width: 90% !important;
 		height: 600px !important;
+	}
+
+	.header-container {
+		overflow-x: hidden;
+		/* hide the cropped portion */
+	}
+
+	#codes {
+		height: 350px !important;
+		width: auto;
+		position: relative;
+		/* allows repositioning */
+		left: 100%;
+		/* move the whole width of the image to the right */
+		margin-left: -200%;
+		/* magic! */
+	}
+
+	#geek {
+		height: 300px !important;
+		width: auto;
+		position: relative;
+		/* allows repositioning */
+		left: 100%;
+		/* move the whole width of the image to the right */
+		margin-left: -200%;
+		/* magic! */
+		margin-top: -20% !important;
 	}
 }
 
@@ -819,11 +841,11 @@ footer h4 {
 	}
 
 	.map img {
-		width: 600px !important;
+		width: 90% !important;
 	}
 
 	#map {
-		width: 550px !important;
+		width: 90% !important;
 		height: 800px !important;
 	}
 }
@@ -869,13 +891,13 @@ footer h4 {
 		display: none;
 	}
 
-	.img-container {
-		overflow: hidden;
+	.header-container {
+		overflow-x: hidden;
 		/* hide the cropped portion */
 	}
 
 	#codes {
-		height: 400px !important;
+		height: 350px !important;
 		width: auto;
 		position: relative;
 		/* allows repositioning */
@@ -898,8 +920,7 @@ footer h4 {
 	}
 
 	.hero-text {
-		margin-top: 10%;
-		 !important;
+		margin-top: 10% !important;
 	}
 
 	.hero-text > h1 {
@@ -911,11 +932,11 @@ footer h4 {
 	}
 
 	.map img {
-		width: 350px !important;
+		width: 90% !important;
 	}
 
 	#map {
-		width: 350px !important;
+		width: 90% !important;
 		height: 600px !important;
 	}
 }
