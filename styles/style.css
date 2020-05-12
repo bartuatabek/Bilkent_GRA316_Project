@@ -163,10 +163,6 @@ section {
 
 /*-----HERO-----*/
 
-header {
-	height: 100vh;
-}
-
 .header-container {
 	margin: 0 auto;
 	text-align: center;
@@ -873,8 +869,32 @@ footer h4 {
 		display: none;
 	}
 
+	.img-container {
+		overflow: hidden;
+		/* hide the cropped portion */
+	}
+
+	#codes {
+		height: 400px !important;
+		width: auto;
+		position: relative;
+		/* allows repositioning */
+		left: 100%;
+		/* move the whole width of the image to the right */
+		margin-left: -200%;
+		/* magic! */
+	}
+
 	#geek {
-		margin-top: 35% !important;
+		height: 250px !important;
+		width: auto;
+		position: relative;
+		/* allows repositioning */
+		left: 100%;
+		/* move the whole width of the image to the right */
+		margin-left: -200%;
+		/* magic! */
+		margin-top: -50% !important;
 	}
 
 	.hero-text {
