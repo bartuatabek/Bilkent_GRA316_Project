@@ -2,7 +2,7 @@
 Course Project for GRA 316
 
 ### Webpage Access
-[Devs'20 Website](https://bartuatabek.github.io/Devs-20)
+[Devs'20 Website](https://bartuatabek.github.io/Bilkent_GRA316_Project)
 
 ## Course Description: 
 The course aims for a multi-layered understanding of what an interface means by bridging the gap between its' physical and virtual properties. Sign theory is central to the course; it is introduced as a framework to implement functional web interfaces.
